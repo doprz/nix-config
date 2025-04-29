@@ -18,6 +18,8 @@
     eza # A modern replacement for ‘ls’
     fzf # A command-line fuzzy finder
     tmux
+    zoxide
+    yazi
 
     # networking tools
     mtr # A network diagnostic tool
@@ -73,11 +75,50 @@
     enable = true;
   };
 
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    history.size = 10000;
+  };
+
+  programs.fzf = {
+    enable = true;
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+    enableFishIntegration = true;
+  };
+
   # starship - an customizable prompt for any shell
   programs.starship = {
     enable = true;
     settings = {
     };
+  };
+
+  programs.ghostty = {
+    enable = true;
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+    enableFishIntegration = true;
+    settings = {
+      theme = "GruvboxDark";
+      font-size = 10;
+    };
+  };
+
+  programs.zoxide = {
+    enable = true;
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+    enableFishIntegration = true;
+  };
+
+  programs.yazi = {
+    enable = true;
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+    enableFishIntegration = true;
   };
 
   # This value determines the home Manager release that your
