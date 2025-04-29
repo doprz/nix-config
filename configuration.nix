@@ -81,8 +81,8 @@
   users.users.doprz = {
     isNormalUser = true;
     description = "doprz";
+    shell = pkgs.zsh;
     extraGroups = [ "networkmanager" "wheel" ];
-    shell = pkgs.fish;
     packages = with pkgs; [
     #  thunderbird
     ];
@@ -91,7 +91,7 @@
   # Install firefox.
   programs.firefox.enable = true;
 
-  programs.fish.enable = true;
+  programs.zsh.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
